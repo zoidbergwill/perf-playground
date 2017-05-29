@@ -70,13 +70,12 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  #
-  #   echo "deb [trusted=yes] https://repo.iovisor.org/apt/xenial xenial-nightly main" | sudo tee /etc/apt/sources.list.d/iovisor.list
-  #   sudo apt-get update
-  #   sudo apt-get install bcc-tools
-  #
-  # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    echo "deb [trusted=yes] https://repo.iovisor.org/apt/xenial xenial-nightly main" | sudo tee /etc/apt/sources.list.d/iovisor.list
+    apt-get update
+    apt-get install -y \
+      bcc-tools \
+      sysstat # For sar, iostat, etc.
+
+  SHELL
 end
