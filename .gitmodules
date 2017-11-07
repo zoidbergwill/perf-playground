@@ -1,0 +1,21 @@
+[submodule "bcc"]
+	path = bcc
+	url = https://github.com/iovisor/bcc.git
+[submodule "FlameGraph"]
+	path = FlameGraph
+	url = https://github.com/brendangregg/FlameGraph.git
+[submodule "cloud-perf-labs"]
+	path = cloud-perf-labs
+	url = https://github.com/joyent/cloud-perf-labs.git
+[submodule "scope-http-statistics"]
+	path = scope-http-statistics
+	url = https://github.com/weaveworks-plugins/scope-http-statistics.git
+[submodule "ply"]
+	path = ply
+	url = https://github.com/iovisor/ply.git
+[submodule "perf-tools"]
+	path = perf-tools
+	url = https://github.com/brendangregg/perf-tools.git
+[submodule "linux-tracing-workshop"]
+	path = linux-tracing-workshop
+	url = git@github.com:goldshtn/linux-tracing-workshop.git
