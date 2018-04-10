@@ -11,6 +11,6 @@ Vagrant.configure("2") do |config|
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D4284CDD
     echo "deb https://repo.iovisor.org/apt/xenial xenial main" | tee /etc/apt/sources.list.d/iovisor.list
     apt-get update
-    apt-get install bcc-tools libbcc-examples linux-headers-$(uname -r)
+    apt-get install auditd bcc-tools libbcc-examples linux-headers-$(uname -r)
   SHELL
 end
